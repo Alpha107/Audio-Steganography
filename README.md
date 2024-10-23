@@ -12,7 +12,7 @@ Both the cover and secret files are transformed into a single-channel (mono) num
 ### **2. Embedding the Secret Audio**
 The main task of the program is to hide the secret audio within the cover audio using DCT. This is done by the embed_secret_into_cover(cover, secret, alpha) function.
 
-DCT-Based Embedding:
+**DCT-Based Embedding:**
 
 **Step 1: Apply DCT:** Both cover and secret audios are transformed into the frequency domain using DCT.
 
