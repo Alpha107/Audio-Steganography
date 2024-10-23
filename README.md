@@ -43,6 +43,10 @@ Mean Squared Error (MSE): This measures the difference between the original secr
 
 Signal-to-Noise Ratio (SNR): This measures the amount of noise introduced during the embedding process. A higher SNR indicates better preservation of the original signal.
 
+**Results:** 
+MSE (Cover vs Stego): 0.000003
+SNR (Cover vs Stego): 40.92 dB
+
 ## **6. Visualizing and Analyzing Results**
 
 The program provides various visualizations to compare the original, stego, and extracted signals:
@@ -87,3 +91,12 @@ Root Mean Square (RMS) values show the average energy of the audio signals. Comp
 - Correlation Plot: This shows the correlation between cover and stego audio, highlighting how closely the two waveforms match after embedding.
 
 ![Correlation](https://github.com/user-attachments/assets/ab72a5e5-1dde-4b01-a7ad-a88d8e9220f9)
+
+## Potential Future Improvements:
+- **Optimized Coefficient Selection:** Instead of embedding data into standard mid-frequency DCT coefficients, machine learning techniques could dynamically select the most robust coefficients based on the characteristics of the audio and the expected attack types.
+- **Hybrid Techniques:** Combining DCT with other transforms like Fourier or Wavelet transforms might improve resistance against lossy compression and other modifications.
+- **Encryption before Embedding:** Encrypt the secret message using secure encryption algorithms like AES (Advanced Encryption Standard) before embedding it into the audio. This ensures that even if part of the hidden message is detected, it cannot be interpreted without the decryption key.
+- **Randomized Embedding Locations:** Instead of embedding in fixed mid-frequency DCT coefficients, the embedding positions can be randomized based on a secret key. This would make the detection of hidden data much harder because the pattern of embedding becomes unpredictable.
+
+
+
