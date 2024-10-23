@@ -1,6 +1,4 @@
-# Audio-Steganography
-
-## DCT
+# Audio-Steganography using DCT
 
 This code implements an audio steganography technique, where a secret audio signal is embedded into a cover audio signal using the Discrete Cosine Transform (DCT). The DCT, commonly used in image and audio processing, transforms the audio signals from the time domain into the frequency domain, allowing for embedding with minimal perceptual distortion. After embedding, the secret audio can be extracted from the stego (modified) audio.
 
@@ -25,10 +23,11 @@ DCT-Based Embedding:
 ## **3. Saving the Stego Audio**
 Once the secret audio has been embedded into the cover audio, the stego audio is saved to a file using save_audio(file_path, audio, sr).
 
-**4. Extracting the Secret Audio**
+## **4. Extracting the Secret Audio**
 The embedded secret audio is extracted using the extract_secret_from_stego(stego, cover, alpha) function, which effectively reverses the embedding process.
 
-DCT-Based Extraction:
+**DCT-Based Extraction:**
+
 Step 1: Apply DCT: The DCT is applied to both the stego audio and the original cover audio.
 
 Step 2: Extract the Secret: The secret audio is recovered by subtracting the cover's DCT coefficients from the stego’s and dividing by the embedding strength alpha.
@@ -37,37 +36,54 @@ Step 3: Inverse DCT: The recovered DCT coefficients are transformed back into th
 
 The extracted secret audio is then saved to a file for comparison
 
-**5. Metrics: MSE and SNR Calculation**
+## **5. Metrics: MSE and SNR Calculation**
 To evaluate the quality of the embedding and extraction process, two metrics are computed:
 
 Mean Squared Error (MSE): This measures the difference between the original secret and the extracted secret. A lower value indicates better quality.
 
 Signal-to-Noise Ratio (SNR): This measures the amount of noise introduced during the embedding process. A higher SNR indicates better preservation of the original signal.
 
-**6. Visualizing and Analyzing Results**
+## **6. Visualizing and Analyzing Results**
 
 The program provides various visualizations to compare the original, stego, and extracted signals:
 
-Waveform Comparisons:
+**Waveform Comparisons:**
 Waveform of Cover vs Stego: This shows how much the stego audio deviates from the cover audio.
+
+![CoverVSStego](https://github.com/user-attachments/assets/baeb3db9-8cbd-4b78-a63d-19f468e44aa6)
+
 
 Waveform of Original Secret vs Extracted Secret: This compares the original secret and the extracted secret.
 
-Spectrogram Analysis:
+![OSecVSESec](https://github.com/user-attachments/assets/5010c799-6b44-448c-8bd0-631fd706db51)
+
+
+**Spectrogram Analysis:**
 Spectrograms visualize the frequency content of audio signals over time, which helps identify differences between the cover, stego, and extracted secret signals.
 
-RMS Energy Comparison:
+![CoverAudioSpectogram](https://github.com/user-attachments/assets/b3b6f4b3-a494-4dfa-b0ce-6542b0548eb8)
+
+![StegoAudioSpectrogram](https://github.com/user-attachments/assets/6959ca47-6c2f-4dbe-a13e-6eeff191dafe)
+
+![ExtractedSecretSpectogram](https://github.com/user-attachments/assets/528f3e9c-7e2f-4f3a-b958-8f4304a59a20)
+
+
+**RMS Energy Comparison:**
 Root Mean Square (RMS) values show the average energy of the audio signals. Comparing RMS values of the cover, stego, and extracted secret reveals how much energy distortion is introduced during the embedding and extraction processes.
 
-Histogram and Correlation:
+![RMSComparison](https://github.com/user-attachments/assets/5726d824-e762-4d8d-9183-11e79d0f2b56)
+
+
+**Histogram and Correlation:**
 - Amplitude Histograms for cover, stego, and extracted secret signals provide insight into how the amplitude distribution changes after embedding and extraction.
+
+![CoverHistogram](https://github.com/user-attachments/assets/3725a454-e498-4441-9e39-ee347427c27b)
+
+![StegoHistogram](https://github.com/user-attachments/assets/b168a531-699f-40db-9598-e6cc089b998f)
+
+![ExtractedSecHistogram](https://github.com/user-attachments/assets/1c4a1cfe-5069-4e76-a42c-292a8505cd15)
+
 
 - Correlation Plot: This shows the correlation between cover and stego audio, highlighting how closely the two waveforms match after embedding.
 
-
-
-
-
-
-
-
+![Correlation](https://github.com/user-attachments/assets/ab72a5e5-1dde-4b01-a7ad-a88d8e9220f9)
