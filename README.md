@@ -62,6 +62,11 @@ Waveform of Original Secret vs Extracted Secret: This compares the original secr
 
 ![OSecVSESec](https://github.com/user-attachments/assets/5010c799-6b44-448c-8bd0-631fd706db51)
 
+Waveform Overlay:
+
+![WaveformOverlay](https://github.com/user-attachments/assets/22abccd8-e531-4bba-93b9-2a887b160353)
+
+
 
 **Spectrogram Analysis:**
 Spectrograms visualize the frequency content of audio signals over time, which helps identify differences between the cover, stego, and extracted secret signals.
