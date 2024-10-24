@@ -44,9 +44,9 @@ Mean Squared Error (MSE): This measures the difference between the original secr
 Signal-to-Noise Ratio (SNR): This measures the amount of noise introduced during the embedding process. A higher SNR indicates better preservation of the original signal.
 
 **Results:** 
-- MSE (Cover vs Stego): 0.000003
+- MSE (Cover vs Stego): 6.783
 
-- SNR (Cover vs Stego): 40.92 dB
+- SNR (Cover vs Stego): 43.525 dB
 
 ## **6. Visualizing and Analyzing Results**
 
